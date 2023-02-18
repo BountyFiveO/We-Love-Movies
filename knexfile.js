@@ -2,8 +2,13 @@ const path = require("path");
 
 require("dotenv").config();
 
+// const {
+//   DATABASE_URL = "postgres://oerlmerv:TwNTB-n0vsAfll_czxfXvrE5zW9tBXTS@manny.db.elephantsql.com/oerlmerv",
+// } = process.env;
+
 const {
-  DATABASE_URL = "postgres://oerlmerv:TwNTB-n0vsAfll_czxfXvrE5zW9tBXTS@manny.db.elephantsql.com/oerlmerv",
+  DEVELOPMENT_DATABASE_URL,
+  PRODUCTION_DATABASE_URL,
 } = process.env;
 
 module.exports = {
