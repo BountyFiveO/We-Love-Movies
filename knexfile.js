@@ -6,10 +6,9 @@ require("dotenv").config();
 //   DATABASE_URL = "postgres://oerlmerv:TwNTB-n0vsAfll_czxfXvrE5zW9tBXTS@manny.db.elephantsql.com/oerlmerv",
 // } = process.env;
 
-const {
-  DEVELOPMENT_DATABASE_URL,
-  PRODUCTION_DATABASE_URL,
-} = process.env;
+const URL = {
+NODE_ENV === "production" ? PRODUCTION_DATABASE_URL : DEVELOPMENT_DATABASE_URL;
+}
 
 module.exports = {
   development: {
